@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULO DE NOTA ESCOLAR</title>
+</head>
+<body>
+<!--Crie dois códigos de sistema de notas para uma escola. 
+O primeiro código deve ser um programa que informa se o aluno reprovou, 
+ou não, com base nas três notas que ele adicionou ao programa. Utilize, no mínimo,
+ um operador de atribuição e um operador ternário.-->
+
+<script>
+var nota1 = Number(prompt('Inisra sua primeira nota:'))
+var nota2 = Number(prompt('Inisra sua segunda nota:'))
+var nota3 = Number(prompt('Inisra sua terceira nota:'))
+media = (nota1 + nota2 + nota3)/3
+
+let status =  media >=7 ? 'Aprovado.':'Reprovado.'
+
+alert('A média calculada foi ' + media.toFixed(1) + ', o aluno está ' + status)
+
+//---------------------------------------------------------------------------------------------
+/*O segundo código é um programa que o aluno deve escrever duas 
+notas e o retorno informa a nota mínima que ele 
+deve tirar na próxima prova para poder passar com nota sete.*/
+
+var p1 = Number(prompt('Inisra sua primeira nota:'))
+var p2 = Number(prompt('Inisra sua segunda nota:'))
+
+mediaCalc = (p1 + p2)/2
+
+let status1 =  mediaCalc >=7 ? 'Aprovado.':'Reprovado.'
+
+
+alert('A média calculada foi ' + mediaCalc.toFixed(2) + ', o aluno está ' + status1)
+
+mediaCalc1 = mediaCalc
+
+if (mediaCalc1 < 7) {
+    mediaCalc1 = 7 - mediaCalc1
+    notaMinima = mediaCalc1
+    alert('Média baixa => ' + mediaCalc.toFixed(2) + ', a nota mínima para aprovação é 7, o aluno precisará na próxima prova de ' + notaMinima.toFixed(2) + ' para ser aprovado.')
+}
+
+</script>
+</body>
+</html>
